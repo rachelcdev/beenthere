@@ -3,7 +3,6 @@ import React from "react";
 import style from "../global-style";
 import styled from "styled-components";
 
-import Image from "../img/lexi_photo2.png";
 import mentor_vector_2 from "../img/mentor_vector_2.svg";
 import mentor_vector_1 from "../img/mentor_vector_1.svg";
 import Button from "../components/Button";
@@ -152,6 +151,11 @@ function BuddyIntroBoard(props) {
   const { handleShowChecklist } = props;
   const { buddyInfo } = props;
   const { id } = buddyInfo;
+  const audio = [
+    "https://www.ximalaya.com/thirdparty/player/sound/player.html?id=314891104&type=yellow",
+    "https://www.ximalaya.com/thirdparty/player/sound/player.html?id=314895856&type=yellow",
+  ];
+
   return (
     // <div></div>
     <Section>
@@ -161,13 +165,22 @@ function BuddyIntroBoard(props) {
           src={`/avatars/${avatarList[id - 1]}`}
           alt="buddy"
         />
-        <img src={mentor_vector_1} className="mentor-vector--1" />
-        <img src={mentor_vector_2} className="mentor-vector--2" />
+        <img src={mentor_vector_1} className="mentor-vector--1" alt="vector" />
+        <img src={mentor_vector_2} className="mentor-vector--2" alt="vector" />
       </div>
       <BuddyInfor className="buddyInfor">
         <div className="title">
           Hi! 我是 <span className="name">{buddyInfo.name}</span>
         </div>
+
+        <iframe
+          height="60"
+          width="260"
+          src={audio[id - 1]}
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+
         <div className="description">
           <p>#{buddyInfo.info}</p>
           <p>#{buddyInfo.desc}</p>
@@ -181,7 +194,7 @@ function BuddyIntroBoard(props) {
             <div className="label">擅长领域</div>
           </div>
           <div className="label--list">
-            {buddyInfo.tag.length !== 0
+            {buddyInfo.tag && buddyInfo.tag.length !== 0
               ? buddyInfo.tag.map((item, index) => (
                   <p className="label--item" key={index}>
                     {item}

@@ -27,7 +27,7 @@ const avatarList = [
   "23.png",
   "24.jpeg",
   "25.jpg",
-  "26.jpg",
+  "26.png",
   "27.jpeg",
   "28.jpg",
   "29.jpeg",

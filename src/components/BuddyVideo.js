@@ -82,6 +82,7 @@ function BuddyVideo(props) {
             <div className="video">
               {/* <iframe width="420" height="315" src={video[0]}></iframe> */}
               <iframe
+                title="mentor video"
                 width="100%"
                 height="550"
                 src={

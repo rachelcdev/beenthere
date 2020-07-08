@@ -4,45 +4,41 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import Image from "../img/lexi_v.png";
-// import Article from "../img/article.png";
-
+import Gallery1 from "../img/lexi_v1.png";
+import Gallery2 from "../img/lexi_v2.png";
+import Gallery3 from "../img/lexi_v3.png";
 // import { renderRoutes } from "react-router-config";
 const Section = styled.div`
   text-align: center;
-  padding: 5rem;
+  margin: 10rem;
+  padding: 0 15rem;
+  .videoTitle {
+    justify-content: start;
+    text-align: start;
+    margin: 0 11%;
+    margin-bottom: 4rem;
+    font-size: ${style["font-size-l"]};
+  }
   .title {
     font-size: ${style["font-size-ll"]};
     line-height: ${style["line-height-3"]};
     margin-bottom: 2rem;
   }
-  .articleTitle {
-    margin-right: 1rem;
-    font-size: ${style["font-size-l"]};
-    line-height: 2;
-    text-align: left;
-    margin-bottom: 5rem;
-  }
 
-  .articlePic {
-    width: 80rem;
-    height: 80rem;
-    margin-left: 1rem;
-
+  .video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    width: 100%;
     /*margin-right: 2rem; */
-    img {
+    margin-bottom: 2rem;
+    .videoTitle {
+      margin: 2rem;
       width: 100%;
-    }
-  }
-  .article {
-    width: 30rem;
-    height: 30rem;
-    margin-left: 1rem;
+      font-size: ${style["font-size-l"]};
 
-    align-items: center;
-    /*margin-right: 2rem; */
-    img {
-      width: 60%;
+      /* margin: 0 50%; */
     }
   }
   .button {
@@ -60,25 +56,68 @@ const Section = styled.div`
       border-bottom: 1px solid ${style["highlight-color"]};
     }
   }
+
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3rem;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 3rem;
+    &--image {
+      width: 90%;
+      height: 100%;
+    }
+  }
 `;
 
-function BuddyArticle(props) {
-  const { history, route } = props;
-
-  const handleClick = (id) => {
-    history.push(`/mentors/${id}`);
-  };
+function BuddyVideo(props) {
+  const { video, name, id } = props;
   return (
     <Section>
-      <div className="articleTitle">
-        <p>文章标题</p>
-      </div>
+      <div className="title">TA的文章</div>
+      {video ? (
+        <React.Fragment>
+          <div>
+            <div className="video">
+              {/* <iframe width="420" height="315" src={video[0]}></iframe> */}
+              <iframe
+                title="mentor video"
+                width="100%"
+                height="550"
+                src={
+                  id === "1"
+                    ? "//player.bilibili.com/player.html?aid=796143240&bvid=BV1vC4y187pT&cid=209242025&page=1"
+                    : "//player.bilibili.com/player.html?aid=456306409&bvid=BV1c5411e74v&cid=209290011&page=1"
+                }
+                scrolling="no"
+                border="0"
+                frameborder="no"
+                framespacing="0"
+                allowfullscreen="true"
+              ></iframe>
+              <div className="videoTitle">{name} 个人介绍</div>
+            </div>
+          </div>
+          {/* <div className="bar"></div> */}
+          {/* <div className="gallery">
+            <figure>
+              <img src={Gallery1} alt="gallery" className="gallery--image" />
+            </figure>
+            <figure>
+              <img src={Gallery2} alt="gallery" className="gallery--image" />
+            </figure>
+            <figure>
+              <img src={Gallery3} alt="gallery" className="gallery--image" />
+            </figure>
+          </div>
 
-      <div className="article">
-        <p></p>
-      </div>
-      <button className="button">展开 </button>
+          <button className="button">查看更多 </button> */}
+        </React.Fragment>
+      ) : (
+        <p>空空如也</p>
+      )}
     </Section>
   );
 }
-export default React.memo(withRouter(BuddyArticle));
+export default React.memo(BuddyVideo);

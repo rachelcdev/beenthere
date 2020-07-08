@@ -53,7 +53,7 @@ function BuddyInfo(props) {
       fetchedData();
     };
   }, []);
-  const { history, route } = props;
+  const { history } = props;
 
   const { buddies } = props;
   const { fetchedData } = props;
