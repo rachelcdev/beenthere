@@ -25,7 +25,7 @@ export const Container = styled.div`
       color: ${style["font-color-light-2"]};
       span {
         display: block;
-        line-height: ${style["line-height-m"]};
+        line-height: ${style["line-height-l"]};
       }
     }
   }
@@ -33,15 +33,15 @@ export const Container = styled.div`
     z-index: 1;
     &--1 {
       margin: 0 2rem;
-      width: 36%;
+      width: 36vw;
     }
     &--2 {
       padding-right: 5rem;
-      width: 45%;
+      width: 40vw;
     }
     &--3 {
       margin: 0 2rem;
-      width: 45%;
+      width: 40vw;
     }
     img {
       width: 100%;
@@ -65,7 +65,7 @@ export const Container = styled.div`
     &--3 {
       right: -6rem;
       top: -1rem;
-      width: 50vw;
+      width: 40vw;
       height: 60vw;
       transform: rotate(-180deg) rotateX(-180deg)
         matrix(-0.97, -0.23, -0.23, 0.97, 0, 0);

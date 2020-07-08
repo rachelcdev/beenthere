@@ -221,11 +221,11 @@ function Introduction(props) {
         <div className="introduction">
           <div className="introduction__group">
             <div className="introduction__detail">
-              <span className="introduction__count">3000+</span>
-              <span className="introduction__text">咨询案例</span>
+              <span className="introduction__count">4500+</span>
+              <span className="introduction__text">咨询对话</span>
             </div>
             <div className="introduction__description">
-              BeenThere 所有咨询案例超过 3000 个
+              共进行超过4500次咨询对话
             </div>
           </div>
           <div className="introduction__group">

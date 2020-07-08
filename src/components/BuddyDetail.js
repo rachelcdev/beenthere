@@ -42,7 +42,7 @@ const Section = styled.div`
   height: 21.5rem;
   width: 49rem;
   padding: 2rem;
-  color: #222;
+  color:${style["font-color-light-1"]};
   background-color: ${(props) =>
     props.colorChange
       ? props.colorChange.background
@@ -112,10 +112,13 @@ const Section = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
+    font-weight: bold;
   }
   .name {
+    color: ${(props) =>
+      props.colorChange ? props.colorChange.color : style["highlight-color"]};
     font-size: ${style["font-size-l"]};
-    font-weight: bold;
+    
     display: flex;
     justify-content: space-between;
   }

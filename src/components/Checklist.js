@@ -10,13 +10,14 @@ const Container = styled.div`
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1000;
+
   opacity: ${(props) => (props.showStatus ? 1 : 0)};
   visibility: ${(props) => (props.showStatus ? "visible" : "hidden")};
   transition: all 0.2s;
 
   .checklist {
     width: 35%;
-    height: 53rem;
+    height: 75vh;
     padding: 5rem;
     position: absolute;
     top: 50%;
@@ -36,44 +37,43 @@ const Container = styled.div`
       font-weight: bold;
       color: ${style["font-color-light-1"]};
       line-height: 1.5;
-      margin-bottom: 10px;
+      margin-bottom: 25px;
       span {
         display: block;
       }
     }
     &__content {
       width: 100%;
-      height: 65%;
+      height: 50%;
       font-size: inherit;
-
       line-height: ${style["line-height-s"]};
-
       overflow: scroll;
       overflow-x: hidden;
       position: relative;
     }
-    &__item {
-      cursor: pointer;
 
+    &__item {
+      font-size: ${style["font-size-m"]};
+      line-height: ${style["line-height-l"]};
+      padding: 0 30px;
       display: flex;
-    }
-    &__item:not(:last-child) {
       margin-bottom: 20px;
+      color: ${style["font-color-light-1"]};
     }
-    &__icon--1,
-    &__icon--2 {
-      flex: 1;
-      margin-right: 10px;
+    &__checkbox {
+      display: flex;
+      align-items: center;
+      margin: 5px auto;
+      font-size: ${style["font-size-m"]};
     }
     &__icon--1 {
-      width: 14px;
-      height: 14px;
-    }
-    &__icon--2 {
+      flex: 1;
+      margin-right: 10px;
       width: 16px;
       height: 16px;
     }
-    &__icon--3 {
+
+    &__icon--2 {
       position: absolute;
       width: 30px;
       height: 30px;
@@ -83,11 +83,6 @@ const Container = styled.div`
       &:hover path {
         fill: ${style["highlight-color"]};
       }
-    }
-    &__text {
-      flex: 0 0 85%;
-
-      padding: 0 10px;
     }
   }
   .button {
@@ -121,7 +116,7 @@ function Checklist(props) {
   const checkIcon = (
     <svg
       t="1593722429468"
-      class="checklist__icon--2"
+      class="checklist__icon--1"
       viewBox="0 0 1024 1024"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +140,7 @@ function Checklist(props) {
   const closeIcon = (
     <svg
       t="1593724592923"
-      className="checklist__icon--3"
+      className="checklist__icon--2"
       viewBox="0 0 1024 1024"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -161,55 +156,18 @@ function Checklist(props) {
     </svg>
   );
   const contract = [
-    {
-      id: 1,
-      checked: false,
-      text:
-        "我理解，平台不是心理危机干预，不提供专业的心理咨询、诊断、治疗，并且不提供医疗保健相关的具体建议",
-    },
-    { id: 2, checked: false, text: "我没有伤害自己、或伤害他人的想法" },
-    { id: 3, checked: false, text: "我没有住院接受心理治疗和护理的经历" },
-    {
-      id: 4,
-      checked: false,
-      text:
-        "在过去一年，我没有服用过精神类药物，如抗抑郁药、情绪稳定剂、抗抑郁药、抗精神病药等",
-    },
-    {
-      id: 5,
-      checked: false,
-      text: "在过去三个月，我没有接受过专业的心理咨询或心理治疗",
-    },
-    {
-      id: 6,
-      checked: false,
-      text: "我会尊重Buddy、遵守平台的规则以及国家的法律法规",
-    },
-
-    {
-      id: 7,
-      checked: false,
-      text: "我不会在平台之外私下联系Buddy，不要求Buddy交换私人联系方式",
-    },
-
-    {
-      id: 8,
-      checked: false,
-      text:
-        "在如果（1）话题超出平台服务范围、（2）违反平台规定或国家法律法规，Buddy可口头预警三次，然后根据具体情况决定是否终止聊天",
-    },
-    {
-      id: 9,
-      checked: false,
-      text: "我同意BeenThere的用户协议 和 隐私协议",
-    },
+    "我理解，平台不是心理危机干预，不提供专业的心理咨询、诊断、治疗，并且不提供医疗保健相关的具体建议",
+    "我没有伤害自己、或伤害他人的想法",
+    "我没有住院接受心理治疗和护理的经历",
+    "在过去一年，我没有服用过精神类药物，如抗抑郁药、情绪稳定剂、抗抑郁药、抗精神病药等",
+    "在过去三个月，我没有接受过专业的心理咨询或心理治疗",
+    "我会尊重Buddy、遵守平台的规则以及国家的法律法规",
+    "我不会在平台之外私下联系Buddy，不要求Buddy交换私人联系方式",
+    "在如果（1）话题超出平台服务范围、（2）违反平台规定或国家法律法规，Buddy可口头预警三次，然后根据具体情况决定是否终止聊天",
   ];
-  const [contractList, setContractList] = useState(contract);
-  const handleClick = (id) => {
-    const newContractList = contractList.map((item) => {
-      return item.id === id ? { ...item, checked: !item.checked } : item;
-    });
-    setContractList(newContractList);
+  const [check, setcheck] = useState(false);
+  const handleClick = () => {
+    setcheck(!check);
   };
   return (
     <Container showStatus={showStatus}>
@@ -223,23 +181,17 @@ function Checklist(props) {
           <span>请确认以下选项：</span>
         </div>
         <div className="checklist__content">
-          {contractList.map((item) => (
-            <div
-              className="checklist__item"
-              onClick={() => handleClick(item.id)}
-            >
-              {item.checked ? checkIcon : uncheckIcon}
-              <span className="checklist__text">{item.text}</span>
+          {contract.map((item, index) => (
+            <div className="checklist__item" key={index}>
+              {index + 1}. {item}
             </div>
           ))}
         </div>
+        <div onClick={handleClick} className="checklist__checkbox">
+          {check ? checkIcon : uncheckIcon} 我已阅读并理解
+        </div>
         <div className="button">
-          {" "}
-          {contractList.filter((item) => !item.checked).length === 0 ? (
-            <Button>继续</Button>
-          ) : (
-            <Button background="#f6f6f6">继续</Button>
-          )}
+          <Button disabled={!check}>继续</Button>
         </div>
       </div>
     </Container>

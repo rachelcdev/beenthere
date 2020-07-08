@@ -16,7 +16,7 @@ export default {
   "font-size-m": "1.4rem",
   "font-size-l": "1.6rem",
   "font-size-ls": "2.25rem",
-  "font-size-ll": "3rem",
+  "font-size-ll": "3.2rem",
   "line-height-ll": "3.6rem",
   "line-height-l": "2.5rem",
   "line-height-m": "2rem",
