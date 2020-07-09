@@ -61,6 +61,10 @@ export const Container = styled.div`
   padding-bottom: 10rem;
   padding-top: 5rem;
   position: relative;
+  @media (min-width: 93.75em) {
+    width: 1440px;
+    margin: 0 auto;
+  }
   .photo {
     z-index: 1;
     &--1 {

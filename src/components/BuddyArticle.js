@@ -11,21 +11,15 @@ import Gallery3 from "../img/lexi_v3.png";
 const Section = styled.div`
   text-align: center;
   margin: 10rem;
-  padding: 0 15rem;
-  .videoTitle {
-    justify-content: start;
-    text-align: start;
-    margin: 0 11%;
-    margin-bottom: 4rem;
-    font-size: ${style["font-size-l"]};
-  }
+  padding: 0 12rem;
+
   .title {
     font-size: ${style["font-size-ll"]};
     line-height: ${style["line-height-3"]};
     margin-bottom: 2rem;
   }
 
-  .video {
+  .article {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,13 +27,22 @@ const Section = styled.div`
     width: 100%;
     /*margin-right: 2rem; */
     margin-bottom: 2rem;
-    .videoTitle {
-      margin: 2rem;
+    color: ${style["font-color-light-1"]};
+    &--title {
+      margin: 3rem auto;
       width: 100%;
-      font-size: ${style["font-size-l"]};
+      font-size: ${style["font-size-ls"]};
 
       /* margin: 0 50%; */
     }
+    &--content {
+      /* margin: 5rem; */
+      font-size: ${style["font-size-l"]};
+      line-height: ${style["line-height-l"]};
+    }
+  }
+  .articles {
+    display: flex;
   }
   .button {
     border: none;
@@ -56,63 +59,123 @@ const Section = styled.div`
       border-bottom: 1px solid ${style["highlight-color"]};
     }
   }
+`;
+const ArticleItem = styled.div`
+  display: flex;
+  /* justify-content: space-between; */
+  align-content: center;
+  width: 42rem;
+  height: 11rem;
+  margin: 1rem;
 
-  .gallery {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 3rem;
-    border-top: 1px solid #e5e5e5;
-    padding-top: 3rem;
-    &--image {
-      width: 90%;
-      height: 100%;
-    }
+  padding: 1rem;
+  border: 2px solid ${style["highlight-color"]};
+
+  .shape {
+    flex: 0 0 25%;
+    height: 100%;
+  }
+  .image {
+    height: 100%;
+    /* transform: scale(0.6); */
+    transition: all 0.2s;
+  }
+  .text {
+    flex: 1;
+
+    padding: 5px;
+    overflow: hidden;
+  }
+  .title {
+    font-size: ${style["font-size-m"]};
+    text-align: left;
+  }
+  .content {
+    font-size: ${style["font-size-s"]};
+    line-height: ${style["line-height-l"]};
   }
 `;
-
 function BuddyVideo(props) {
-  const { video, name, id } = props;
+  const articles = [
+    {
+      userid: 2,
+      articleId: 1,
+      title: "你好，我叫程卓",
+      content: [
+        "我从小在新疆乌鲁木齐长大，直到大学前都是一个生活以刷题为主旋律的小朋友。在2009年，我以新疆理科第一名的成绩考入了清华大学，然后立刻体验了一回边远地区同学被学术碾压的巨大落差（泪目）。",
+        "之后不断寻找方向，寻找定位。学习成绩中不溜，没挤进团委学生会的“大舞台”，作为商科学生居然大三过了一半才开始第一份实习…… 终于，在大三结束之前找到了自己的“点”，义无反顾地扎进去做到极致，最终在毕业时获得了最想去的公司的offer。",
+        "从高中“实验班”、大学“状元班”、麦肯锡“总裁班”，到后来的麻省理工和哈佛大学“很有面子班”，我短暂的人生经历了无数“天纵英才”型的选手，而他们则成功地把我锻炼成了一枚“小强”型选手。我很早就看到了自己在数理化上面的极限，所以果断转了社会学科；我的第一份实习是做走街串巷的推销员，那就当锻炼脸皮嘴皮；哈佛申请了三年四遍，创业做散了四拨团队……这些才是人生常态，要像一个“小强”一样去面对。",
+        "我不认为自己天分卓群，但是作为普通人，也有自己的生存本领。比如说，我从来不妄想在许多方面都比别人强；相反，我会找准最适合自己的一两件事，做到极致。我从来都不认为自己的任何一个观点是完全正确的，只能不断小心地增加正确的概率，随时准备被纠正甚至推翻。我至今没有完全克服打游戏上瘾的问题，所以我的办法就是，尽量不去碰它……",
+        " 如果你也找不到奋斗的方向，如果你也挣扎在强手如林的地方，如果你也对自己的明天怀有期待，那我的存在就是一个好消息。作为一个普通人，我们一样可以扬长避短，加上一点点笑对失败的“小强”精神，最终得到那些我们羡慕的东西。I have been there, and we can make it.  ",
+        "期待成为你的Buddy，让我陪你笑对挫折，让我们一起寻找方向，让我们成为更好的人。",
+      ],
+    },
+    {
+      userid: 2,
+      articleId: 1,
+      title: "你好，我叫程卓",
+      content: [
+        "我从小在新疆乌鲁木齐长大，直到大学前都是一个生活以刷题为主旋律的小朋友。在2009年，我以新疆理科第一名的成绩考入了清华大学，然后立刻体验了一回边远地区同学被学术碾压的巨大落差（泪目）。",
+        "之后不断寻找方向，寻找定位。学习成绩中不溜，没挤进团委学生会的“大舞台”，作为商科学生居然大三过了一半才开始第一份实习…… 终于，在大三结束之前找到了自己的“点”，义无反顾地扎进去做到极致，最终在毕业时获得了最想去的公司的offer。",
+        "从高中“实验班”、大学“状元班”、麦肯锡“总裁班”，到后来的麻省理工和哈佛大学“很有面子班”，我短暂的人生经历了无数“天纵英才”型的选手，而他们则成功地把我锻炼成了一枚“小强”型选手。我很早就看到了自己在数理化上面的极限，所以果断转了社会学科；我的第一份实习是做走街串巷的推销员，那就当锻炼脸皮嘴皮；哈佛申请了三年四遍，创业做散了四拨团队……这些才是人生常态，要像一个“小强”一样去面对。",
+        "我不认为自己天分卓群，但是作为普通人，也有自己的生存本领。比如说，我从来不妄想在许多方面都比别人强；相反，我会找准最适合自己的一两件事，做到极致。我从来都不认为自己的任何一个观点是完全正确的，只能不断小心地增加正确的概率，随时准备被纠正甚至推翻。我至今没有完全克服打游戏上瘾的问题，所以我的办法就是，尽量不去碰它……",
+        " 如果你也找不到奋斗的方向，如果你也挣扎在强手如林的地方，如果你也对自己的明天怀有期待，那我的存在就是一个好消息。作为一个普通人，我们一样可以扬长避短，加上一点点笑对失败的“小强”精神，最终得到那些我们羡慕的东西。I have been there, and we can make it.  ",
+        "期待成为你的Buddy，让我陪你笑对挫折，让我们一起寻找方向，让我们成为更好的人。",
+      ],
+    },
+  ];
+  const { article, name, id } = props;
   return (
     <Section>
       <div className="title">TA的文章</div>
-      {video ? (
+      {article ? (
         <React.Fragment>
           <div>
-            <div className="video">
-              {/* <iframe width="420" height="315" src={video[0]}></iframe> */}
-              <iframe
-                title="mentor video"
-                width="100%"
-                height="550"
-                src={
-                  id === "1"
-                    ? "//player.bilibili.com/player.html?aid=796143240&bvid=BV1vC4y187pT&cid=209242025&page=1"
-                    : "//player.bilibili.com/player.html?aid=456306409&bvid=BV1c5411e74v&cid=209290011&page=1"
-                }
-                scrolling="no"
-                border="0"
-                frameborder="no"
-                framespacing="0"
-                allowfullscreen="true"
-              ></iframe>
-              <div className="videoTitle">{name} 个人介绍</div>
+            <div className="article">
+              <img
+                src={`/articles/21.png`}
+                alt="gallery"
+                className="gallery--image"
+              />
+              <div className="article--title">{articles[0].title}</div>
+              <div className="article--content">
+                {articles[0].content.map((par) => (
+                  <p
+                    style={{
+                      marginBottom: "20px",
+                      textAlign: "left",
+                      padding: "0 15px",
+                    }}
+                  >
+                    {par}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
-          {/* <div className="bar"></div> */}
-          {/* <div className="gallery">
-            <figure>
-              <img src={Gallery1} alt="gallery" className="gallery--image" />
-            </figure>
-            <figure>
-              <img src={Gallery2} alt="gallery" className="gallery--image" />
-            </figure>
-            <figure>
-              <img src={Gallery3} alt="gallery" className="gallery--image" />
-            </figure>
+          <div className="bar"></div>
+          <div className="articles">
+            {articles.map((artile) => (
+              <ArticleItem>
+                <figure className="shape">
+                  <img
+                    src={`/articles/21.png`}
+                    alt="gallery"
+                    className="image"
+                  />
+                </figure>
+                <div className="text">
+                  <h3 className="title">{articles[0].title}</h3>
+                  <p className="content">
+                    {articles[0].content.map((par) => (
+                      <span>{par}</span>
+                    ))}
+                  </p>
+                </div>
+              </ArticleItem>
+            ))}
           </div>
-
-          <button className="button">查看更多 </button> */}
+          <button className="button">查看更多 </button>
         </React.Fragment>
       ) : (
         <p>空空如也</p>

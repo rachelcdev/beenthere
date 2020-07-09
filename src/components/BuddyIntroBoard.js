@@ -52,11 +52,38 @@ const Section = styled.div`
     margin: 0 auto;
     padding: 0 10rem;
     position: relative;
+
     @media (max-width: 37.5em) {
       flex: 0 0 100%;
       /* width: 35vw; */
       display: flex;
       justify-content: center;
+    }
+    .mentor-vector--1 {
+      position: absolute;
+      bottom: 0;
+      left: -25%;
+
+      z-index: 0;
+      width: 60%;
+      transform: rotate(-25deg);
+      @media (max-width: 37.5em) {
+        display: none;
+      }
+    }
+
+    .mentor-vector--2 {
+      position: absolute;
+
+      top: -80px;
+      left: 68%;
+
+      width: 50%;
+      z-index: 0;
+      transform: rotate(20deg);
+      @media (max-width: 37.5em) {
+        display: none;
+      }
     }
     .avatar {
       width: 100%;
@@ -75,27 +102,6 @@ const Section = styled.div`
         left: 0;
         margin: auto;
         transform: none;
-      }
-    }
-
-    .mentor-vector--1 {
-      position: absolute;
-      top: -10rem;
-      left: 4rem;
-      z-index: 0;
-      width: 100%;
-      @media (max-width: 37.5em) {
-        display: none;
-      }
-    }
-    .mentor-vector--2 {
-      position: absolute;
-      top: 12rem;
-      left: 40rem;
-      width: 50%;
-      z-index: 0;
-      @media (max-width: 37.5em) {
-        display: none;
       }
     }
   }
@@ -190,13 +196,13 @@ function BuddyIntroBoard(props) {
     // <div></div>
     <Section>
       <div className="image">
+        <img src={mentor_vector_1} className="mentor-vector--1" alt="vector" />
+        <img src={mentor_vector_2} className="mentor-vector--2" alt="vector" />
         <img
           className="avatar"
           src={`/avatars/${avatarList[id - 1]}`}
           alt="buddy"
         />
-        <img src={mentor_vector_1} className="mentor-vector--1" alt="vector" />
-        <img src={mentor_vector_2} className="mentor-vector--2" alt="vector" />
       </div>
       <BuddyInfor className="buddyInfor">
         <div className="title">

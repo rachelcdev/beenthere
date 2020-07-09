@@ -9,7 +9,8 @@
       "service": true,
       "tag": ["个人成长", "生活压力", "情感关系"],
       "image": "",
-      "video": ["https://www.bilibili.com/video/av796143240/"]
+      "video": true,
+      "article": true
     },
     {
       "id": 2,
@@ -20,7 +21,8 @@
       "service": true,
       "tag": ["自我突破", "挫折迷茫", "压力管理", "人际关系", "情感关系"],
       "image": "",
-      "video": ["https://www.bilibili.com/video/av456306409/"]
+      "video": true,
+      "article": true
     },
     {
       "id": 3,
