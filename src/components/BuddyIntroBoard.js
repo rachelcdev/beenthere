@@ -46,29 +46,47 @@ const Section = styled.div`
   align-items: center;
   padding: 5rem;
   padding-top: 10rem;
+  flex-wrap: wrap;
   .image {
     flex: 0 0 35%;
     margin: 0 auto;
     padding: 0 10rem;
     position: relative;
+    @media (max-width: 37.5em) {
+      flex: 0 0 100%;
+      /* width: 35vw; */
+      display: flex;
+      justify-content: center;
+    }
     .avatar {
       width: 100%;
       border-radius: 50%;
-    }
-    img {
       position: absolute;
       width: 100%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 1;
+      @media (max-width: 37.5em) {
+        width: 40%;
+        position: relative;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        margin: auto;
+        transform: none;
+      }
     }
+
     .mentor-vector--1 {
       position: absolute;
       top: -10rem;
       left: 4rem;
       z-index: 0;
       width: 100%;
+      @media (max-width: 37.5em) {
+        display: none;
+      }
     }
     .mentor-vector--2 {
       position: absolute;
@@ -76,11 +94,18 @@ const Section = styled.div`
       left: 40rem;
       width: 50%;
       z-index: 0;
+      @media (max-width: 37.5em) {
+        display: none;
+      }
     }
   }
   .buddyInfor {
     flex: 0 0 50%;
     padding: 2rem 10rem;
+    @media (max-width: 37.5em) {
+      flex: 0 0 100%;
+      padding: 25px;
+    }
   }
 `;
 
@@ -88,6 +113,10 @@ const BuddyInfor = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 37.5em) {
+    align-items: center;
+    width: 100%;
+  }
   .title {
     font-size: ${style["font-size-ll"]};
     line-height: ${style["line-height-3"]};
@@ -109,6 +138,7 @@ const BuddyInfor = styled.div`
   .area,
   .button,
   .label-box {
+    width: 100%;
     margin-bottom: 1rem;
   }
 

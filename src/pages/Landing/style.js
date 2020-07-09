@@ -15,12 +15,12 @@ export const Container = styled.div`
       color: ${style["font-color-dark"]};
       span {
         display: block;
-        line-height: ${style["line-height-ll"]};
+        line-height: ${style["line-height-l"]};
       }
     }
     &__sub {
       font-size: ${style["font-size-l"]};
-      line-height: ${style["line-height-m"]};
+
       margin-bottom: 3rem;
       color: ${style["font-color-light-2"]};
       span {

@@ -20,12 +20,12 @@ export const Container = styled.div`
     }
     &__sub {
       font-size: ${style["font-size-l"]};
-      line-height: ${style["line-height-l"]};
+
       margin-bottom: 3rem;
       color: ${style["font-color-light-1"]};
       span {
         display: block;
-        line-height: ${style["line-height-m"]};
+        line-height: ${style["line-height-l"]};
       }
       &--hightlight {
         font-weight: bold;

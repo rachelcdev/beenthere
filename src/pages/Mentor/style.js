@@ -39,7 +39,7 @@ export const HeaderContainer = styled.div`
     margin: 0;
     font-size: ${style["font-size-m"]};
     font-weight: bold;
-    height: 100vh;
+    height: 30px;
     cursor: pointer;
   }
 `;

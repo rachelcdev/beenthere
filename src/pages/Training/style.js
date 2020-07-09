@@ -112,7 +112,7 @@ export const Description = styled.div`
     }
     span {
       display: block;
-      line-height: ${style["line-height-m"]};
+      line-height: ${style["line-height-l"]};
     }
   }
 `;

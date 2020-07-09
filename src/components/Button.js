@@ -7,8 +7,9 @@ const Section = styled.button`
     props.background ? props.background : style["button-color"]};
   cursor: pointer;
   border-radius: 100px;
-  padding: 1.5rem 6.7rem;
+  padding: 1.5rem;
   width: 100%;
+  font-weight: bold;
   font-size: ${style["font-size-l"]};
   color: ${(props) =>
     props.fontColor ? props.fontColor : style["font-color-light-1"]};

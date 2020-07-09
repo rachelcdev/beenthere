@@ -7,8 +7,21 @@ import card3 from "../img/打卡_1.svg";
 import { Description } from "../pages/Training/style";
 export const CardDescription = styled(Description)`
   width: 100%;
-  margin: 3rem 6rem;
+  margin: 4vw;
+
   margin-bottom: 0;
+  @media (min-width: 75em) {
+    margin: 6vw 4vw;
+  }
+  @media (max-width: 75em) {
+    margin: 5vw 3vw;
+  }
+  @media (max-width: 56.25em) {
+    margin: 4vw 3vw;
+  }
+  @media (max-width: 37.5em) {
+    margin: 3vw;
+  }
 `;
 
 export const Card = styled.div`
@@ -18,6 +31,12 @@ export const Card = styled.div`
   height: 12vw;
   overflow: hidden;
   transition: all 0.3s;
+  @media (max-width: 37.5em) {
+    height: 7vw;
+  }
+  .title {
+    font-size: ${style["font-size-l"]};
+  }
   .card-img {
     flex: 0 0 35%;
     height: 30vw;
@@ -25,6 +44,9 @@ export const Card = styled.div`
     border-right: 3px solid rgba(255, 255, 255, 0.2);
     position: relative;
     padding: 4rem;
+    @media (max-width: 37.5em) {
+      height: 25vw;
+    }
   }
 `;
 
@@ -38,6 +60,9 @@ export const Cards = styled.div`
     &--1 {
       height: 30vw;
       background-color: rgba(115, 91, 123, 0.8);
+      @media (max-width: 37.5em) {
+        height: 25vw;
+      }
     }
     &--2 {
       background-color: rgba(93, 91, 123, 0.8);

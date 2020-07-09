@@ -42,7 +42,7 @@ const Section = styled.div`
   height: 21.5rem;
   width: 49rem;
   padding: 2rem;
-  color:${style["font-color-light-1"]};
+  color: ${style["font-color-light-1"]};
   background-color: ${(props) =>
     props.colorChange
       ? props.colorChange.background
@@ -65,9 +65,7 @@ const Section = styled.div`
     color: ${(props) =>
       props.colorChange ? props.colorChange.color : style["highlight-color"]};
   }
-  @media (max-width: 37.5em) {
-    flex-direction: column;
-  }
+
   .appointment {
     position: absolute;
     top: 1rem;
@@ -75,32 +73,32 @@ const Section = styled.div`
     font-size: ${style["font-size-m"]};
     display: flex;
     align-items: center;
+    @media (max-width: 56.25em) {
+      display: none;
+      /* height: 12rem; */
+    }
   }
   .image {
     flex: 0 0 30%;
     width: 16rem;
-    height: 100%;
-    margin-left: 1rem;
-    display: flex;
-    align-items: center;
+    /* height: 16rem; */
+    /* margin-left: 1rem; */
+    /* display: flex; */
+    /* align-items: center; */
     /* margin-right: 2rem; */
     img {
       width: 100%;
+      height: 100%;
       border-radius: 50%;
-      /* border: 5px solid
-        ${(props) =>
-          props.colorChange
-            ? props.colorChange.color
-            : style["highlight-color"]}; */
     }
     @media (max-width: 56.25em) {
       width: 12rem;
-      height: 12rem;
+      /* height: 12rem; */
     }
     @media (max-width: 37.5em) {
-      flex-direction: column;
-      width: 4rem;
-      height: 4rem;
+      /* flex-direction: column; */
+      width: 6rem;
+      /* height: 6rem; */
     }
   }
   .detail {
@@ -117,8 +115,8 @@ const Section = styled.div`
   .name {
     color: ${(props) =>
       props.colorChange ? props.colorChange.color : style["highlight-color"]};
-    font-size: ${style["font-size-l"]};
-    
+    font-size: ${style["font-size-ls"]};
+
     display: flex;
     justify-content: space-between;
   }
