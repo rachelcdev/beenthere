@@ -3,7 +3,10 @@ import style from "../../global-style";
 export const Section = styled.div`
   text-align: center;
   padding: 10rem 15rem;
-
+  @media (min-width: 93.75em) {
+    width: 1440px;
+    margin: 0 auto;
+  }
   .title {
     padding-top: 10rem;
     font-size: ${style["font-size-ll"]};

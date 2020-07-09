@@ -10,6 +10,7 @@ export const CardDescription = styled(Description)`
   margin: 4vw;
 
   margin-bottom: 0;
+
   @media (min-width: 75em) {
     margin: 6vw 4vw;
   }
@@ -55,7 +56,10 @@ export const Cards = styled.div`
   width: 80vw;
   margin: auto;
   flex-direction: column;
-
+  @media (min-width: 93.75em) {
+    width: 1152px;
+    margin: 0 auto;
+  }
   .card {
     &--1 {
       height: 30vw;

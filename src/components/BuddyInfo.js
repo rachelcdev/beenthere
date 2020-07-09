@@ -8,6 +8,10 @@ import { connect } from "react-redux";
 const Section = styled.div`
   text-align: center;
   padding: 5rem;
+  @media (min-width: 93.75em) {
+    width: 1440px;
+    margin: 0 auto;
+  }
   .title {
     color: ${style["font-color-dark"]};
     font-size: ${style["font-size-ll"]};

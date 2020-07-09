@@ -13,7 +13,10 @@ const Section = styled.div`
   margin: 10rem;
   /* padding: 0 5rem; */
   position: relative;
-
+  /* @media (min-width: 93.75em) {
+    width: 1440px;
+    margin: 0 auto;
+  } */
   .image {
     width: 30vw;
     /* widt0: 30vw; */
@@ -23,6 +26,10 @@ const Section = styled.div`
     align-items: center;
     margin: auto;
     z-index: 1;
+    @media (min-width: 93.75em) {
+      width: 432px;
+      margin: 0 auto;
+    }
     img {
       width: 100%;
     }
@@ -33,6 +40,10 @@ const Section = styled.div`
     flex-direction: column;
     position: relative;
     margin: auto;
+    @media (min-width: 93.75em) {
+      width: 504px;
+      margin: 0 auto;
+    }
     .mentor_vector_3 {
       width: 40%;
       position: absolute;
@@ -80,6 +91,10 @@ const Section = styled.div`
     transform: rotate(9deg);
 
     width: 20vw;
+    @media (min-width: 93.75em) {
+      width: 288px;
+      margin: 0 auto;
+    }
     img {
       width: 100%;
     }

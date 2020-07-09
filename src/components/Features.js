@@ -8,6 +8,10 @@ import { Link } from "react-router-dom";
 const Section = styled.div`
   text-align: center;
   padding: 5rem;
+  @media (min-width: 93.75em) {
+    width: 1440px;
+    margin: 0 auto;
+  }
   .title {
     font-size: ${style["font-size-ll"]};
     line-height: ${style["line-height-l"]};

@@ -5,6 +5,10 @@ export const Container = styled.div`
   justify-content: space-evenly;
   padding-bottom: 20rem;
   position: relative;
+  @media (min-width: 93.75em) {
+    width: 1152px;
+    margin: 0 auto;
+  }
   .description {
     /* width: 75%; */
     /* padding-left: 2rem; */
@@ -54,21 +58,21 @@ export const Container = styled.div`
     &--1 {
       left: -5rem;
       top: -8rem;
-      width: 45vw;
-      height: 50vw;
+      width: 45%;
+      height: 100%;
     }
     &--2 {
       right: 0;
       top: -8rem;
-      width: 45vw;
-      height: 55vw;
+      width: 45%;
+      height: 100%;
     }
     &--3 {
       transform: rotateY(-4.4deg);
       left: -8rem;
       top: -20rem;
-      width: 50vw;
-      height: 60vw;
+      width: 50%;
+      height: 100%;
     }
   }
 `;

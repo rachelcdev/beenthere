@@ -31,7 +31,10 @@ const Container = styled.div`
     justify-content: space-between;
 
     font-size: ${style["font-size-s"]};
-
+    @media (min-width: 93.75em) {
+      width: 432px;
+      margin: 0 auto;
+    }
     &__title {
       text-align: center;
       font-weight: bold;

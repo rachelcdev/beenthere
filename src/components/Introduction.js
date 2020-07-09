@@ -7,6 +7,10 @@ import { Link } from "react-router-dom";
 const Section = styled.div`
   padding: 10rem;
   text-align: center;
+  @media (min-width: 93.75em) {
+    width: 1440px;
+    margin: 0 auto;
+  }
   .introductionSection {
     display: flex;
     justify-content: space-evenly;

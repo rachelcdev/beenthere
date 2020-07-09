@@ -5,6 +5,10 @@ export const Section = styled.div`
   /* z-index: 100; */
 
   transform-origin: right bottom;
+  @media (min-width: 93.75em) {
+    width: 1440px;
+    margin: 0 auto;
+  }
   &.fly-enter,
   &.fly-appear {
     transform: rotateZ(30deg) translate3d(100%, 0, 0);
