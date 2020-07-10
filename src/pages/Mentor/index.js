@@ -71,7 +71,7 @@ function Mentor(props) {
             <BuddyQuoteBoard
               handleShowChecklist={handleShowChecklist}
               service={buddyInfo.service}
-              buddyInfo={buddyInfo}
+              id={id}
             />
 
             <Checklist
