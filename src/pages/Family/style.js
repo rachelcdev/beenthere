@@ -93,6 +93,7 @@ export const Gallery = styled.div`
     display: block;
     object-fit: cover;
   }
+
   .text {
     font-size: ${style["font-size-l"]};
     line-height: ${style["line-height-ll"]};
@@ -146,5 +147,66 @@ export const Gallery = styled.div`
     &--13 {
       display: ${(props) => (props.expandAll ? "block" : "none")};
     }
+  }
+`;
+export const Credentials = styled.div`
+  display: grid;
+  grid-column: full-start/full-end;
+  grid-template-columns: repeat(3, 24vw);
+  grid-template-rows: repeat(3, 12vw);
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 25px;
+  width: 100%;
+
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  .caption {
+    align-self: end;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    height: 100%;
+  }
+  .image {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+    align-self: center;
+    &--1 {
+      width: 85%;
+    }
+    &--2 {
+      width: 110%;
+    }
+    &--3 {
+      width: 60%;
+    }
+    &--4 {
+      width: 75%;
+    }
+    &--5 {
+      width: 35%;
+    }
+    &--6 {
+      width: 60%;
+    }
+    &--7 {
+      width: 65%;
+    }
+    &--8 {
+      width: 90%;
+    }
+    &--9 {
+      width: 90%;
+    }
+  }
+  .text {
+    font-size: ${style["font-size-m"]};
+    color: #434343;
+    font-weight: bold;
+    margin-top: 20px;
   }
 `;
