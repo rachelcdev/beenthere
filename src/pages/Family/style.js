@@ -2,7 +2,7 @@ import styled from "styled-components";
 import style from "../../global-style";
 export const Section = styled.div`
   text-align: center;
-  padding: 10rem 15rem;
+  padding: 10rem 10rem;
   @media (min-width: 93.75em) {
     width: 1440px;
     margin: 0 auto;
@@ -156,7 +156,7 @@ export const Credentials = styled.div`
   grid-template-rows: repeat(3, 12vw);
   grid-column-gap: 1.5rem;
   grid-row-gap: 25px;
-  width: 100%;
+  width: 80vw;
 
   margin: 0 auto;
   margin-bottom: 5rem;
@@ -166,7 +166,7 @@ export const Credentials = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
+    width: 100%;
     height: 100%;
   }
   .image {
@@ -175,6 +175,7 @@ export const Credentials = styled.div`
     display: block;
     object-fit: cover;
     align-self: center;
+    flex: 1;
     &--1 {
       width: 85%;
     }
@@ -197,14 +198,17 @@ export const Credentials = styled.div`
       width: 65%;
     }
     &--8 {
-      width: 90%;
+      width: 105%;
     }
     &--9 {
-      width: 90%;
+      width: 110%;
     }
   }
   .text {
+    flex: 0 0 30%;
+
     font-size: ${style["font-size-m"]};
+    line-height: ${style["line-height-l"]};
     color: #434343;
     font-weight: bold;
     margin-top: 20px;

@@ -44,11 +44,9 @@ function Family() {
   );
   const [expandAll, setExpandAll] = useState(false);
   const handleExpand = () => {
-    setExpandAll(true);
+    setExpandAll(!expandAll);
   };
-  const handleClose = () => {
-    setExpandAll(false);
-  };
+
   return (
     <Section>
       {" "}
@@ -151,7 +149,7 @@ function Family() {
             className="image"
           />
         </figure>
-        <div className="icon" onClick={expandAll ? handleClose : handleExpand}>
+        <div className="icon" onClick={handleExpand}>
           {expandAll ? closeIcon : expandIcon}
         </div>
       </Gallery>
