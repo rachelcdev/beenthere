@@ -86,7 +86,7 @@ function BuddyInfo(props) {
       <div className="buddy-record">
         {buddies
           .filter((item, index) => index < 4)
-          .map(({ id, name, info, desc, region, tag }) => (
+          .map(({ id, name, info, desc, region, tag, avatar }) => (
             <div
               key={id}
               onClick={() => {
@@ -102,6 +102,7 @@ function BuddyInfo(props) {
                 region={region}
                 tag={tag}
                 id={id}
+                avatar={avatar}
               />
             </div>
           ))}
