@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Description, QRcode, Section } from "./style";
 import Button from "../../components/Button";
-import Introduction from "../../components/Introduction";
-import Carousel from "../../components/Carousel";
+import Introduction from "./components/Introduction";
 
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -13,9 +12,10 @@ import video from "../../img/jieyacang.png";
 import photo1 from "../../img/test1_1.png";
 import photo2 from "../../img/spaceship_22_1.png";
 import training_vector_1 from "../../img/training_vector_1.png";
-import TrainingCards from "../../components/TrainingCards";
-import background from "../../img/background.png";
-
+import TrainingCards from "./components/TrainingCards";
+import qrtree from "../../img/qr_tree_1.png";
+import qrcode from "../../img/qrfinal.png";
+import training_vector_2 from "../../img/training_vector_2.png";
 function Training() {
   const introRender = () => {
     return (
@@ -25,18 +25,20 @@ function Training() {
         </div>
         <Description>
           <h2 className="title">
-            <span>人生解压舱</span>
-            <span>它是个什么舱？</span>
+            人生解压舱
+            <br />
+            它是个什么舱？
           </h2>
           <h3 className="content">
-            <span>延续 BeenThere 倾听陪伴的本心，</span>
-            <span>这是一个为期21天的解压体验舱。</span>
-            <span>起航日期定为6月1日，</span>
-            <span>每个解压舱限定10个舱位，</span>
-            <span>容纳2名BeenThere Buddy与8名“解压舱乘客”，</span>
-            <span>这10人组成一个同伴互助小团体。</span>
-            <span>为大家提供一个可以敞开心扉、探讨感受、分享情</span>
-            <span>绪、交流经历的安全空间。</span>
+            延续 BeenThere 倾听陪伴的本心， <br />
+            这是一个为期7天的解压体验舱。 <br />
+            全程由经过培训的BeenThere朋辈支持者带领， <br />
+            人生解压舱将会以线上同伴团体互助的形式呈现。
+            <br /> <br />
+            每个解压舱至多容纳9名“乘客”， <br />
+            在安全、平等、相互尊重和信任的环境中， <br />
+            大家敞开心扉、探讨感受、分享情绪、交流经历
+            <br />
           </h3>
         </Description>
       </Container>
@@ -46,18 +48,19 @@ function Training() {
   const joinRender = () => {
     return (
       <Container>
-        <Description className="description--2">
+        <Description>
           <h2 className="title">
-            <span>只要￥661，</span>
-            <span>一天一杯奶茶钱，</span>
-            <span>活力有趣赛神仙~</span>
+            只要￥279 <span className="title--sub">(预报名享9折优惠)</span>
+            <br />
+            一天一杯奶茶钱，
+            <br />
+            活力有趣赛神仙~
           </h2>
-          <h3 className="content">
-            <span>那么这21天的时间里在人生解压舱离我们都干啥嘞？</span>
-            <span>心动不如行动看完下列活动马上来报名吧~</span>
-          </h3>
+          <div className="content">
+            在人生解压舱的这7天里，我们有下列这么多的活动等着你。舱位有限，快预约登舱券吧～
+          </div>
           <a href="#">
-            <Button>我要报名</Button>
+            <Button style={{ width: "70%" }}>点我预约舱位</Button>
           </a>
         </Description>
         <div className="photo photo--2">
@@ -66,7 +69,38 @@ function Training() {
       </Container>
     );
   };
-
+  const joinMethod = () => {
+    return (
+      <Container>
+        <QRcode>
+          <div className="training-vector">
+            <img src={qrtree} alt="QR tree" />
+          </div>
+          <div className="qrcode">
+            <img src={qrcode} alt="QR code" />
+          </div>
+          {/* <div></div> */}
+          <img
+            src={training_vector_2}
+            // className=""
+            alt="background vector 2"
+          />
+        </QRcode>
+        <Description>
+          <h2 className="title">预约登舱，请扫二维码</h2>
+          <h3 className="content">
+            扫描左方二维码填写预报名表
+            <br />
+            <br />
+            若二维码扫描失败，复制此链接至浏览器打开 <br />
+            这里应该是二维码链接 <br />
+            <br />
+            BeenThere 小助手会通过邮件或微信及时联系你
+          </h3>
+        </Description>
+      </Container>
+    );
+  };
   const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
@@ -95,7 +129,7 @@ function Training() {
         backgroundColor="#132434"
         showBackground={showBackground}
       />
-      <Section style={{ backgroundImage: "url(" + background + ")" }}>
+      <Section style={{ background: "#04141F" }}>
         <div className="background-vector">
           <img
             src={training_vector_1}
@@ -114,42 +148,20 @@ function Training() {
         {introRender()}
         {joinRender()}
         <TrainingCards />
-        <Description>
-          <div className="title title--center">BeenThere Buddy 导师团队</div>
-          <div className="content content--center">
-            Beenthere 有 100 余位来自世界各地的Online Buddy,
-            <br />
-            TA 们经过精心筛选和严格培训, 其中有哈佛、麻省理工、哥大、 <br />
-            斯坦福、伯克利、清华、北大、港大、剑桥、牛津等名校的众多校
-          </div>
-        </Description>
-        <Carousel />
-        <Link to="/mentors">
-          <button className="button">查看更多 ></button>
-        </Link>
-        <Introduction
-          swiperColor="rgba(91, 115, 123, 0.8)"
-          fontColor="#fff2df"
-        />
-        {/* {joinMethod()} */}
-        <Description>
-          <div className="content--center content ">
-            <span>
-              送自己张“人生减压舱”的登舱券吧，在这里，你会被看见、被理解、被支持、被尊重；
-            </span>
-            <span>
-              送自己张“人生减压舱”的登舱券吧，与心中的少年对话，与久违的真我链接；
-            </span>
-            <span>
-              送自己张“人生减压舱”的登舱券吧，学会如何释怀，从而得到解压与踏实！
-            </span>
-            <br />
-            <span>
-              跟大伙儿一块儿将那久久戴着的面具摘下，把内心那个年少的、真实的自己约出来见见面呀～
-            </span>
-            <span>说真的，让自己透透气吧！</span>
-          </div>
-        </Description>
+
+        <Introduction />
+        {joinMethod()}
+        <div className="text">
+          在 BeenThere 7天人生减压舱，
+          <br /> 我们会被看见、被理解、被支持、被尊重； <br />
+          我们与心中的少年对话，与久违的真我链接；
+          <br /> “没有谁是座孤岛”，心与心的距离就在咫尺之间；
+          <br />
+          我们学会如何释怀，从而得到解压与踏实！
+          <br /> <br />
+          跟大伙儿一块儿将那久久戴着的面具摘下，
+          <br /> 说真的，让自己透透气吧！
+        </div>
       </Section>
       <Footer
         fontColor1="#FFF2DE"

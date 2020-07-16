@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 
 import { CSSTransition } from "react-transition-group";
 import Footer from "../../components/Footer";
-import BuddyIntroBoard from "../../components/BuddyIntroBoard";
-import ThankCard from "../../components/ThankCard";
-import BuddyVideo from "../../components/BuddyVideo";
-import BuddyArticle from "../../components/BuddyArticle";
-import BuddyQuoteBoard from "../../components/BuddyQuoteBoard";
-import Checklist from "../../components/Checklist";
-import HotlineCard from "../../components/HotlineCard";
+import BuddyIntroBoard from "./components/BuddyIntroBoard";
+import ThankCard from "./ThankCard";
+import BuddyVideo from "./components/BuddyVideo";
+import BuddyArticle from "./components/BuddyArticle";
+import BuddyQuoteBoard from "./components/BuddyQuoteBoard";
+import Checklist from "./components/Checklist";
+import HotlineCard from "./components/HotlineCard";
 import { connect } from "react-redux";
 import { fetchedMentorData } from "../../redux/index";
 import { isEmptyObject } from "../../utils/utils";
@@ -136,6 +136,7 @@ function Mentor(props) {
             <Checklist
               showStatus={showChecklist}
               handleCloseChecklist={handleCloseChecklist}
+              id={id}
             />
             <HotlineCard
               showStatus={showHotline}

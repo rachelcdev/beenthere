@@ -30,29 +30,19 @@ export const QRcode = styled.div`
 `;
 export const Section = styled.div`
   position: relative;
-  text-align: center;
+  padding-bottom: 50px;
+  .text {
+    color: ${style["theme-color-primary"]};
+    font-size: ${style["font-size-l"]};
+    text-align: center;
+    line-height: ${style["line-height-ll"]};
+  }
   .background-vector {
     position: absolute;
-    top: 75%;
+    top: 80%;
     right: 0;
     width: 40vw;
     z-index: 0;
-  }
-  .button {
-    border: none;
-
-    color: ${style["color-yellow-3"]};
-    font-size: ${style["font-size-m"]};
-    background-color: transparent;
-    padding: 1rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    border-bottom: 1px solid transparent;
-    :hover {
-      font-weight: bold;
-      transform: translateX(1rem) scale(1.03);
-      border-bottom: 1px solid ${style["color-yellow-3"]};
-    }
   }
 `;
 export const Container = styled.div`
@@ -83,40 +73,31 @@ export const Container = styled.div`
 `;
 export const Description = styled.div`
   margin: auto 3rem;
+  text-align: left;
+  width: 35%;
+  padding-left: 40px;
   .title {
     color: ${style["color-yellow-3"]};
     font-size: ${style["font-size-ll"]};
+    line-height: ${style["line-height-l"]};
     margin-bottom: 4rem;
-    &--center {
-      margin-top: 10rem;
-      text-align: center;
+    &--sub {
+      font-size: ${style["font-size-m"]};
     }
     &--2 {
       font-size: ${style["font-size-l"]};
-      line-height: ${style["line-height-l"]};
-    }
-    span {
-      display: block;
-      line-height: ${style["line-height-ll"]};
+      letter-spacing: 0.07em;
     }
   }
 
   .content {
     color: ${style["theme-color-primary"]};
     font-size: ${style["font-size-l"]};
-    line-height: ${style["line-height-m"]};
+    line-height: ${style["line-height-ll"]};
+
     margin-bottom: 4rem;
     &--2 {
       font-size: ${style["font-size-m"]};
-    }
-    &--center {
-      text-align: center;
-      padding-bottom: 5rem;
-      margin-bottom: 0;
-    }
-    span {
-      display: block;
-      line-height: ${style["line-height-l"]};
     }
   }
 `;

@@ -9,9 +9,9 @@ import Vector2 from "../../img/Vector_2.png";
 import Vector3 from "../../img/Vector_3.png";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
-import Introduction from "../../components/Introduction";
-import BuddyInfo from "../../components/BuddyInfo";
-import Features from "../../components/Features";
+import Introduction from "./components/Introduction";
+import BuddyInfo from "./components/BuddyInfo";
+import Features from "./components/Features";
 
 function Landing(props) {
   const renderFreeConversion = () => {

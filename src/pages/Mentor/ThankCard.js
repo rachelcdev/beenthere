@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import style from "../global-style";
+import style from "../../global-style";
 import styled from "styled-components";
 import Swiper from "swiper";
 import "swiper/css/swiper.css";

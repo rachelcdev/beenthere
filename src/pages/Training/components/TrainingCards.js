@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
-import style from "../global-style";
-import card1 from "../img/交流_1.svg";
-import card2 from "../img/创意_1.svg";
-import card3 from "../img/打卡_1.svg";
-import { Description } from "../pages/Training/style";
+import style from "../../../global-style";
+import card1 from "../../../img/交流_1.svg";
+import card2 from "../../../img/创意_1.svg";
+import card3 from "../../../img/打卡_1.svg";
+import { Description } from "../style";
 export const CardDescription = styled(Description)`
   width: 100%;
   margin: 4vw;
@@ -109,23 +109,20 @@ function TrainingCards(props) {
         />
         <CardDescription className="card-description">
           <h2 className="title title--2">
-            <span>PEER SUPPORT GROUP MEETING</span>
-            <span> 线上同伴互助交流舱</span>
+            PEER SUPPORT GROUP MEETING
+            <br />
+            线上同伴互助交流舱
           </h2>
 
           <div className="content content--2">
-            <span>
-              Peer Support Group Meeting (以下简称为 PSG Meeting)
-              为”解压舱乘客“提供了一个安全健康的团体心灵互助空间。在这三周里，每个解压舱的“乘客”与
-              BeenThere leaders 每周都会进行一次 PSG Meeting。在 PSG
-              Meeting中，BeenThere leaders
-              将会带领大家围绕着共同挑选出来的主题进行个人感受和经历的分享。每一位“解压舱乘客”都有机会去倾诉心事和疏解情绪，同时也慢慢学会去倾听和陪伴彼此。这21天里，我们在一起，就不孤单。
-            </span>
+            Peer Support Group Meeting (以下简称为 PSG Meeting)
+            为”解压舱乘客“提供了一个安全健康的团体心灵互助空间。在这三周里，每个解压舱的“乘客”与
+            BeenThere leaders 每周都会进行一次 PSG Meeting。在 PSG
+            Meeting中，BeenThere leaders
+            将会带领大家围绕着共同挑选出来的主题进行个人感受和经历的分享。每一位“解压舱乘客”都有机会去倾诉心事和疏解情绪，同时也慢慢学会去倾听和陪伴彼此。这21天里，我们在一起，就不孤单。
             <br></br>
-            <span>
-              我们需要注意的是，PSG Meeting 不是专业的心理咨询。它由经过训练的
-              BeenThere leaders 带领，专门提供同伴之间的帮助和心理支持的。
-            </span>
+            我们需要注意的是，PSG Meeting 不是专业的心理咨询。它由经过训练的
+            BeenThere leaders 带领，专门提供同伴之间的帮助和心理支持的。
           </div>
         </CardDescription>
       </Card>
@@ -144,23 +141,21 @@ function TrainingCards(props) {
         />
         <CardDescription className="card-description">
           <h2 className="title title--2">
-            <span>CREATIVE ACTIVITY</span>
-            <span>线上解压创意活动 </span>
+            CREATIVE ACTIVITY
+            <br />
+            线上解压创意活动
           </h2>
 
           <div className="content content--2">
-            <span>
-              与 PSG Meeting 搭配食用，每周一次的Creative Activity
-              都会根据每个解压舱内“乘客”的时间和兴趣来定。
-            </span>
+            与 PSG Meeting 搭配食用，每周一次的Creative Activity
+            都会根据每个解压舱内“乘客”的时间和兴趣来定。
             <br></br>
-            <span>你以为就只有云健身、云冥想、云看电影嘛？</span>
-            <span> NO!NO!NO!</span>
+            你以为就只有云健身、云冥想、云看电影嘛？
+            <br />
+            NO!NO!NO!
             <br></br>
-            <span>
-              给你个小剧透吧，正经起来的我们会一起在舱内【寻找人生的意义】；嗨皮起来的我们说不定就会来一场让你过翻瘾的【云变装
-              Party】哦～
-            </span>
+            给你个小剧透吧，正经起来的我们会一起在舱内【寻找人生的意义】；嗨皮起来的我们说不定就会来一场让你过翻瘾的【云变装
+            Party】哦～
           </div>
         </CardDescription>
       </Card>
@@ -179,8 +174,9 @@ function TrainingCards(props) {
         ></div>
         <CardDescription className="card-description">
           <h2 className="title title--2">
-            <span>JOURNEY MARKER</span>
-            <span>舱内打卡</span>
+            JOURNEY MARKER
+            <br />
+            舱内打卡
           </h2>
 
           <div className="content content--2">

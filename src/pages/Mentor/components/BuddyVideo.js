@@ -1,13 +1,7 @@
 import React from "react";
-import style from "../global-style";
+import style from "../../../global-style";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { withRouter } from "react-router-dom";
-import Image from "../img/lexi_v.png";
-import Gallery1 from "../img/lexi_v1.png";
-import Gallery2 from "../img/lexi_v2.png";
-import Gallery3 from "../img/lexi_v3.png";
-// import { renderRoutes } from "react-router-config";
+
 const Section = styled.div`
   text-align: center;
   margin: 10rem;

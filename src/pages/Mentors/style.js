@@ -25,23 +25,14 @@ export const Container = styled.div`
       font-weight: bold;
     }
   }
-  .button {
-    border: none;
-    color: ${style["highlight-color"]};
-    font-size: ${style["font-size-m"]};
-    background-color: transparent;
-    padding: 1rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    :hover {
-      font-weight: bold;
-      transform: translateX(1rem) scale(1.03);
-    }
+  .text {
+    color: ${style["font-color-light-2"]};
+    font-size: ${style["font-size-l"]};
+    margin: 3rem auto;
+    line-height: ${style["line-height-m"]};
   }
-
   .buddy-record {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     grid-column-gap: 2rem;

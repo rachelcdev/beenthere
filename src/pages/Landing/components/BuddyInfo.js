@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import BuddyDetail from "./BuddyDetail";
-import style from "../global-style";
+import BuddyDetail from "../../../components/BuddyDetail";
+import style from "../../../global-style";
 import styled from "styled-components";
 import { Link, withRouter } from "react-router-dom";
-import { fetchedData } from "../redux/index";
+import { fetchedData } from "../../../redux/index";
 import { connect } from "react-redux";
 const Section = styled.div`
   text-align: center;

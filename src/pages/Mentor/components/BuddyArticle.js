@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import style from "../global-style";
+import style from "../../../global-style";
 import styled from "styled-components";
 
 const Section = styled.div`

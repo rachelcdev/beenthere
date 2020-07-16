@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import style from "../global-style";
-import mentor_vector_2 from "../img/mentor_vector_2.svg";
-import mentor_vector_3 from "../img/mentor_vector_3.svg";
-import Button from "../components/Button";
+import style from "../../../global-style";
+import mentor_vector_2 from "../../../img/mentor_vector_2.svg";
+import mentor_vector_3 from "../../../img/mentor_vector_3.svg";
+import Button from "../../../components/Button";
 
 const Section = styled.div`
   display: flex;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import "swiper/css/swiper.css";
-import style from "../global-style";
+import style from "../../../global-style";
 import Swiper from "swiper";
 import { Link } from "react-router-dom";
 const Section = styled.div`
@@ -82,7 +82,7 @@ const Section = styled.div`
       color: ${style["font-color-light-2"]};
     }
     &__description {
-      width: 13rem;
+      width: 14rem;
       text-align: center;
       padding-top: 3px;
       font-size: ${style["font-size-s"]};
@@ -1107,9 +1107,12 @@ function Introduction(props) {
                 return (
                   <div className="swiper-slide" key={index}>
                     <div className="slider-nav story">
-                      <p className="story__buddy">Dear {comment.buddy}:</p>
+                      <p className="story__text">
+                        来访者对buddy{" "}
+                        <span className="story__buddy">{comment.buddy} </span>
+                        说:
+                      </p>
                       <p className="story__text">{comment.text}</p>
-                      <p className="story__user">{comment.user}</p>
                     </div>
                   </div>
                 );
@@ -1122,37 +1125,37 @@ function Introduction(props) {
           <div className="introduction__group">
             <div className="introduction__detail">
               <span className="introduction__count">4500+</span>
-              <span className="introduction__text">咨询对话</span>
+              <span className="introduction__text">同伴咨询</span>
             </div>
             <div className="introduction__description">
-              共进行超过4500次咨询对话
+              共进行超过4500次同伴咨询
             </div>
           </div>
           <div className="introduction__group">
             <div className="introduction__detail">
-              <span className="introduction__count">96%</span>
+              <span className="introduction__count">97%</span>
               <span className="introduction__text">表示满意</span>
             </div>
             <div className="introduction__description">
-              96% 的来访者对 Buddy 服务表示满意
+              97％的来访者对平台的同伴心理支持服务表示满意
             </div>
           </div>
           <div className="introduction__group">
             <div className="introduction__detail">
-              <span className="introduction__count">87%</span>
-              <span className="introduction__text">带来提升</span>
+              <span className="introduction__count">63%</span>
+              <span className="introduction__text">多次来访</span>
             </div>
             <div className="introduction__description">
-              87% 的来访者表示我们的服务为 TA 带来提升
+              63％的来访者使用buddy服务的次数多于一次
             </div>
           </div>
           <div className="introduction__group">
             <div className="introduction__detail">
-              <span className="introduction__count">91%</span>
+              <span className="introduction__count">9.1/10</span>
               <span className="introduction__text">愿意推荐</span>
             </div>
             <div className="introduction__description">
-              91% 的来访者愿意将 BeenThere 推荐给他人
+              总分为10，来访者将buddy服务推荐给他人的意愿平均为9.4
             </div>
           </div>
         </div>

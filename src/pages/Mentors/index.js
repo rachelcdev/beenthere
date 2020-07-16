@@ -10,13 +10,12 @@ import { fetchedData } from "../../redux/index";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import { isEmptyObject } from "../../utils/utils";
+
 function Mentors(props) {
   const { history } = props;
   const { buddies } = props;
   const { fetchedData } = props;
   const [showCalling, setShowCalling] = useState(false);
-
-  // const [input, setInput] = useState(undefined);
 
   useEffect(() => {
     fetchedData();
@@ -135,6 +134,13 @@ function Mentors(props) {
           <p>Loading buddy profiles</p>
         )}
       </div>
+      {showCalling ? (
+        <div className="text">
+          还有更多Buddy 即将上线语音/视频服务，敬请期待!
+        </div>
+      ) : (
+        <div className="text">还有更多Buddy 个人简介，小包正在努力搭建!</div>
+      )}
     </Container>
   );
 }

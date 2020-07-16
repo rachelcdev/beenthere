@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import styled from "styled-components";
-import style from "../global-style";
-import Button from "./Button";
+import style from "../../../global-style";
+import Button from "../../../components/Button";
 const Container = styled.div`
   position: fixed;
   top: 0;

@@ -21,7 +21,7 @@ export default function Join() {
             <span>报名Online Buddy</span>
           </h2>
           <h3 className="description__sub">
-            <span>作为提供倾听服务的志愿者，你将收获： </span>
+            <span>作为提供倾听服务的志愿者，你将： </span>
             <span>帮助他人走出困境、实现目标</span>
             <span>学习心理知识、提升咨询技巧</span>
             <span>锻炼共情和沟通——AI时代最重要的人类能力</span>
@@ -29,7 +29,7 @@ export default function Join() {
             <span>结识一群温暖、善良、优秀的同路人</span>
           </h3>
           <a href="https://wj.qq.com/s2/5703103/1d0b/" target="_blank">
-            <Button>我要报名</Button>
+            <Button style={{ width: "80%" }}>我要成为Online Buddy</Button>
           </a>
         </div>
         <img
@@ -46,17 +46,16 @@ export default function Join() {
         <div className="description">
           <h2 className="description__title">报名校园大使</h2>
           <h3 className="description__sub">
-            <span>作为校园大使的你将负责</span>
+            <span>作为校园大使,你将：</span>
             <span>代表BeenThere与高校、高中开展合作</span>
-            <span>收集反馈校内信息，开展学生端的市场调研</span>
-            <span>运用BeenThere和校内资源多样化宣传推广</span>
-            <span>负责校园活动的筹备、协调安排与现场支援</span>
+            <span>开展学生端的市场调研 ，运用校内线上线下的资源</span>
+            <span>去协助BeenThere进行多样化的宣传推广</span>
           </h3>
           <a
             href="https://mp.weixin.qq.com/s/kdycFK7AJUqPyhVEjw7DKw"
             target="_blank"
           >
-            <Button>我要报名</Button>
+            <Button style={{ width: "70%" }}>我要成为校园大使</Button>
           </a>
         </div>
         <div className="photo photo--1">
@@ -82,12 +81,12 @@ export default function Join() {
           </h2>
           <h3 className="description__sub">
             <span className="description__sub--hightlight">
-              作为 BeenThere 实习生，你将获得：
+              作为 BeenThere 实习生，你将可以：
             </span>
-            <span>BeenThere官方实习证书，助力学业、职业发展</span>
+            <span>获得BeenThere官方实习证书，助力学业、职业发展</span>
             <span>享受提供给内部成员的所有配套资源与福利</span>
             <span>深入了解初创企业的管理运营及创新实践</span>
-            <span>软实力的提升与自我成长</span>
+            <span>提升软实力，自我成长</span>
             <span>结实一群有趣有梦的同路人</span>
             <br />
             <span className="description__sub--hightlight">
@@ -102,7 +101,7 @@ export default function Join() {
             href="https://mp.weixin.qq.com/s/KXe5Ok_pF0NDhxuXREiZbA"
             target="_blank"
           >
-            <Button>我要报名</Button>
+            <Button style={{ width: "70%" }}>我要成为实习生</Button>
           </a>
         </div>
 
@@ -119,10 +118,10 @@ export default function Join() {
       <Title>
         <div className="title">欢迎加入BeenThere大家庭！</div>
         <div className="description">
-          <p>BeenThere 是一个源自哈佛中国学生的成长互助社区</p>
-          <p>
-            在这里，你可以获得与心理咨询相关的第一手知识与实践，帮助他人走出困境、迸发潜能，疏解自己的困扰，实现自己的目标，遇见彩虹般的人
-          </p>
+          BeenThere 是一个源自哈佛中国学生的心灵互助社区
+          <br />
+          在这个优质社群里，你将获得与同伴互助相关的实践，不仅可以帮助他人走出困境、迸发潜能，还有可能疏解自己的困扰，实现自己的目标；
+          在BeenThere大家庭，你会遇见彩虹般的人{" "}
         </div>
         <Link to="/family">
           <button className="button">了解 BeenThere ></button>

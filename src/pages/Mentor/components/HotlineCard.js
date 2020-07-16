@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import style from "../global-style";
-import Button from "./Button";
+import style from "../../../global-style";
+import Button from "../../../components/Button";
 import { Link } from "react-router-dom";
-import Image from "../img/Ellipse_64.png";
+import Image from "../../../img/Ellipse_64.png";
 const Container = styled.div`
   position: fixed;
   top: 0;

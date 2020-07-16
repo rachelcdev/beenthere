@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import style from "../global-style";
-import Icon1 from "../img/Ellipse_18.svg";
-import Icon2 from "../img/Ellipse_24.svg";
-import Icon3 from "../img/Ellipse_25.svg";
+import style from "../../../global-style";
+import Icon1 from "../../../img/Ellipse_18.svg";
+import Icon2 from "../../../img/Ellipse_24.svg";
+import Icon3 from "../../../img/Ellipse_25.svg";
 import { Link } from "react-router-dom";
 const Section = styled.div`
   text-align: center;
@@ -142,7 +142,7 @@ function Features() {
   );
   return (
     <Section>
-      <div className="title">来聊聊吧</div>
+      <div className="title">我想获得同伴支持</div>
       <div className="description">
         最私密，最暖心的倾听陪伴 | 足不出户就能得到的心灵支持
       </div>
@@ -179,12 +179,12 @@ function Features() {
         </Link>
       </div>
       <div className="text">
-        BeenThere 是一个由志愿者组成的互助倾听组织，不提供专业的医疗服务，
-        如有需要，建议您接受相关专业服务，或是拨打网站上免费专业的
+        BeenThere
+        是个提供同伴心理支持的平台，不提供专业的医疗服务，如有需要，建议您接受相关专业服务，或是拨打网站上整合的免费专业
         <Link to="/hotline" className="text__highlight">
           &nbsp;[心理支持服务热线]
         </Link>
-        我们在意您的安全和健康，很希望帮到您!
+        。我们在意您的安全和健康，很希望帮到您!
       </div>
     </Section>
   );

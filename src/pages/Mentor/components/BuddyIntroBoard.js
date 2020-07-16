@@ -1,11 +1,11 @@
 import React from "react";
 
-import style from "../global-style";
+import style from "../../../global-style";
 import styled from "styled-components";
 
-import mentor_vector_2 from "../img/mentor_vector_2.svg";
-import mentor_vector_1 from "../img/mentor_vector_1.svg";
-import Button from "../components/Button";
+import mentor_vector_2 from "../../../img/mentor_vector_2.svg";
+import mentor_vector_1 from "../../../img/mentor_vector_1.svg";
+import Button from "../../../components/Button";
 
 const Section = styled.div`
   display: flex;
@@ -115,11 +115,15 @@ const BuddyInfor = styled.div`
     margin-bottom: 1rem;
   }
 
-  .donate {
-    color: ${style["highlight-color"]};
+  .text {
+    color: ${style["font-color-light-1"]};
     font-size: ${style["font-size-s"]};
-    text-align: center;
-    font-weight: bold;
+    line-height: ${style["line-height-l"]};
+    padding: 10px;
+    &--highlight {
+      color: ${style["highlight-color"]};
+      font-weight: bold;
+    }
   }
 
   .label {
@@ -181,23 +185,24 @@ function BuddyIntroBoard(props) {
           <p>#{buddyInfo.desc}</p>
           <p>#{buddyInfo.region}</p>
           <p>
-            自加入BeenThere以来已进行 <span className="number">40</span> 次咨询
+            自加入BeenThere以来已进行 <span className="number">40</span>{" "}
+            次同伴咨询
           </p>
         </div>
-        <div className="label-box">
-          <div className="area">
-            <div className="label">擅长领域</div>
+        {buddyInfo.tag && buddyInfo.tag.length !== 0 ? (
+          <div className="label-box">
+            <div className="area">
+              <div className="label">擅长领域</div>
+            </div>
+            <div className="label--list">
+              {buddyInfo.tag.map((item, index) => (
+                <p className="label--item" key={index}>
+                  {item}
+                </p>
+              ))}
+            </div>
           </div>
-          <div className="label--list">
-            {buddyInfo.tag && buddyInfo.tag.length !== 0
-              ? buddyInfo.tag.map((item, index) => (
-                  <p className="label--item" key={index}>
-                    {item}
-                  </p>
-                ))
-              : null}
-          </div>
-        </div>
+        ) : null}
 
         {/* <div className="label-box">
           <div className="area">
@@ -219,27 +224,41 @@ function BuddyIntroBoard(props) {
                   fontColor="#ffffff"
                   hoverBackground="#9c9cff"
                 >
-                  和TA语音 (xx 元/50分钟)
+                  我要预约
                 </Button>
               </div>
             </a>
-            <a href="#" onClick={handleShowChecklist}>
-              <div className="button">
-                <Button
-                  background="#9ec5ff"
-                  fontColor="#ffffff"
-                  hoverBackground="#9fcbff"
-                >
-                  和TA视频 (xx 元/50分钟)
-                </Button>
-              </div>
-            </a>
-            <div className="donate">
-              <p>*你在BeenThere购买的所有服务，都会有5%捐献给慈善组织</p>
+
+            <div className="text">
+              *你在BeenThere购买的所有服务，都会有
+              <span className="text--highlight">5%</span>捐献给
+              <span className="text--highlight">xx慈善组织</span>
+              <br />
+              *为保障心理支持服务的客观性、专业性与审慎性，用户与同一 buddy
+              一对一交流次数原则上
+              <span className="text--highlight">
+                不得超过每周2次、每半年8次
+              </span>
             </div>
           </React.Fragment>
         ) : (
-          <p>暂未开通语音/视频服务</p>
+          <React.Fragment>
+            <a href="https://wj.qq.com/s2/6734752/cd0e/" target="_black">
+              <div className="button">
+                <Button
+                  background="#a7a7ff"
+                  fontColor="#ffffff"
+                  hoverBackground="#9c9cff"
+                >
+                  希望和TA语音
+                </Button>
+              </div>
+            </a>
+
+            <div className="text">
+              <br />* Buddy暂未开通语音/视频服务...
+            </div>
+          </React.Fragment>
         )}
       </BuddyInfor>
     </Section>
