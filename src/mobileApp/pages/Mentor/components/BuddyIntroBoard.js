@@ -108,7 +108,8 @@ function BuddyIntroBoard(props) {
             <br />
             {buddyInfo.region}
             <br />
-            自加入BeenThere以来已进行 <span className="number">40</span> 次咨询
+            自加入BeenThere以来已进行 <span className="number">40</span>{" "}
+            次同伴心理支持服务
           </div>
         </div>
         <div className="label-box">

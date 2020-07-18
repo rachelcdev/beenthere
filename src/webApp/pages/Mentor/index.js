@@ -125,13 +125,13 @@ function Mentor(props) {
               thankcards={buddyInfo.thankcards}
               ref={refs["thankscards"]}
             />
-            <BuddyQuoteBoard
+            {/* <BuddyQuoteBoard
               handleShowChecklist={handleShowChecklist}
               service={buddyInfo.service}
               id={id}
               avatar={buddyInfo.avatar}
               ref={refs["contact"]}
-            />
+            /> */}
 
             <Checklist
               showStatus={showChecklist}

@@ -123,7 +123,7 @@ const SliderContainer = styled.div`
       margin-bottom: 4rem;
       /* width: 100%; */
     }
-    /* &__user {
+    &__user {
       width: 50%;
       margin-left: 50%;
       font-size: ${style["font-size-s"]};
@@ -136,8 +136,8 @@ const SliderContainer = styled.div`
         height: 1px;
         display: block;
         background-color: currentColor;
-      } */
-    /* } */
+      }
+    }
   }
 `;
 const commentList = [
@@ -180,7 +180,7 @@ function Introduction(props) {
                   <div className="swiper-slide" key={index}>
                     <div className="slider-nav story">
                       <p className="story__text">{comment}</p>
-                      {/* <p className="story__user">来访者感悟</p> */}
+                      <p className="story__user">登舱者感言</p>
                     </div>
                   </div>
                 );

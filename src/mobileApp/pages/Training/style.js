@@ -28,6 +28,7 @@ export const QRcode = styled.div`
     }
   }
 `;
+export const Container = styled.div``;
 export const Section = styled.div`
   position: relative;
   text-align: center;

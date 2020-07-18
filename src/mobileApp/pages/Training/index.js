@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { Description, QRcode, Section, HeaderContainer } from "./style";
+import {
+  Description,
+  QRcode,
+  Section,
+  HeaderContainer,
+  Container,
+} from "./style";
 import Button from "../../components/Button";
-// import Introduction from "../../components/Introduction";
 
 import { CSSTransition } from "react-transition-group";
 
-import top1 from "../../../img/top_1.png";
-import video from "../../../img/jieyacang.png";
 import photo1 from "../../../img/test1_1.png";
-import photo2 from "../../../img/spaceship_22_1.png";
+
 import training_vector_1 from "../../../img/training_vector_1.png";
 import TrainingCards from "./components/TrainingCards";
-import background from "../../../img/background.png";
+
+import qrtree from "../../../img/qr_tree_1.png";
+import qrcode from "../../../img/qrfinal.png";
+import training_vector_2 from "../../../img/training_vector_2.png";
 const arrowIcon = (
   <svg
     t="1595034698857"
@@ -30,7 +36,38 @@ const arrowIcon = (
     ></path>
   </svg>
 );
-
+const joinMethod = () => {
+  return (
+    <Container>
+      <QRcode>
+        <div className="training-vector">
+          <img src={qrtree} alt="QR tree" />
+        </div>
+        <div className="qrcode">
+          <img src={qrcode} alt="QR code" />
+        </div>
+        {/* <div></div> */}
+        <img
+          src={training_vector_2}
+          // className=""
+          alt="background vector 2"
+        />
+      </QRcode>
+      <Description>
+        <h2 className="title">预约登舱，请扫二维码</h2>
+        <h3 className="content">
+          扫描左方二维码填写预报名表
+          <br />
+          <br />
+          若二维码扫描失败，复制此链接至浏览器打开 <br />
+          这里应该是二维码链接 <br />
+          <br />
+          BeenThere 小助手会通过邮件或微信及时联系你
+        </h3>
+      </Description>
+    </Container>
+  );
+};
 function Training(props) {
   const [showBackground, setShowBackground] = useState(false);
   const [showStatus, setShowStatus] = useState(true);
@@ -78,10 +115,7 @@ function Training(props) {
         </div>
         <div>
           <figure className="top">
-            <img src={top1} alt="top_image" style={{ width: "100%" }} />
-          </figure>
-          <figure className="video">
-            <img src={video} alt="解压舱" style={{ width: "100%" }} />
+            {/* <img src={top1} alt="top_image" style={{ width: "100%" }} /> */}
           </figure>
         </div>
 

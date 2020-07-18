@@ -7,8 +7,8 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 import { Link } from "react-router-dom";
-import top1 from "../../../img/top_1.png";
-import video from "../../../img/jieyacang.png";
+// import top1 from "../../../img/top_1.png";
+// import video from "../../../img/jieyacang.png";
 import photo1 from "../../../img/test1_1.png";
 import photo2 from "../../../img/spaceship_22_1.png";
 import training_vector_1 from "../../../img/training_vector_1.png";
@@ -139,10 +139,7 @@ function Training() {
         </div>
         <div>
           <figure className="top">
-            <img src={top1} alt="top_image" style={{ width: "100%" }} />
-          </figure>
-          <figure className="video">
-            <img src={video} alt="解压舱" style={{ width: "100%" }} />
+            {/* <img src={top1} alt="top_image" style={{ width: "100%" }} /> */}
           </figure>
         </div>
         {introRender()}
