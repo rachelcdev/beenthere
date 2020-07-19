@@ -138,7 +138,7 @@ function Mentor(props) {
               showStatus={showHotline}
               handleCloseHotline={handleCloseHotline}
             />
-            {buddyInfo.service ? (
+            {buddyInfo.service === "ready" ? (
               <div className="appointment">
                 <a href="#" onClick={handleShowChecklist}>
                   <Button

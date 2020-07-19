@@ -271,7 +271,7 @@ function BuddyIntroBoard(props) {
             <img src={ImageA4} alt="buddy image" className="label--img" />
           </div>
         </div> */}
-        {buddyInfo.service ? (
+        {buddyInfo.service === "ready" ? (
           <React.Fragment>
             <div style={{ position: "relative" }} className="button">
               <a href="#" onClick={handleShowChecklist}>
