@@ -56,8 +56,9 @@ export const Section = styled.div`
   .appointment {
     width: 100vw;
     background: rgba(249, 249, 249, 0.5);
-
-    height: 80px;
+    position: fixed;
+    bottom: 0;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
