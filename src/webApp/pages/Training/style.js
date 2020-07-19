@@ -115,5 +115,8 @@ export const Description = styled.div`
     &--2 {
       font-size: ${style["font-size-m"]};
     }
+    .appointment {
+      color: ${style["highlight-color"]};
+    }
   }
 `;

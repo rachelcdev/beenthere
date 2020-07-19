@@ -64,6 +64,8 @@ function Family() {
           framespacing="0"
           allowFullScreen={true}
           title="family"
+          width="750"
+          height="550"
         ></iframe>
       </div>
       <div className="description--2 ">

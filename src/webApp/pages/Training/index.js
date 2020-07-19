@@ -87,13 +87,19 @@ function Training() {
           </div>
         </QRcode>
         <Description>
-          <h2 className="title">预约登舱，请扫二维码</h2>
+          <h2 className="title">预约登舱，享9折优惠</h2>
           <h3 className="content">
-            扫描左方二维码填写预报名表
+            扫描二维码填写预报名表
             <br />
             <br />
             若二维码扫描失败，复制此链接至浏览器打开 <br />
-            这里应该是二维码链接 <br />
+            <a
+              href="https://wj.qq.com/s2/6751568/d035?_t=1595078466150"
+              className="appointment"
+            >
+              https://wj.qq.com/s2/6751568/d035?_t=1595078466150
+            </a>{" "}
+            <br />
             <br />
             BeenThere 小助手会通过邮件或微信及时联系你
           </h3>

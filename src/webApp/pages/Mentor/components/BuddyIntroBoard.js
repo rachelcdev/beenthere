@@ -230,16 +230,20 @@ function BuddyIntroBoard(props) {
           src={audio}
           frameBorder="0"
           allowFullScreen
-        ></iframe>
+          title="audio"
+        />
 
         <div className="description">
           <p>#{buddyInfo.info}</p>
           <p>#{buddyInfo.desc}</p>
           <p>#{buddyInfo.region}</p>
-          <p>
-            自加入BeenThere以来已进行 <span className="number">40</span>{" "}
-            次同伴心理支持服务
-          </p>
+          {buddyInfo.serviceTime && (
+            <div>
+              自加入BeenThere以来已进行{" "}
+              <span className="number">{buddyInfo.serviceTime}</span>{" "}
+              次同伴心理支持服务
+            </div>
+          )}
         </div>
         {buddyInfo.tag && buddyInfo.tag.length !== 0 ? (
           <div className="label-box">
