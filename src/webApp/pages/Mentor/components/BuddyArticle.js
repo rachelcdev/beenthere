@@ -6,6 +6,10 @@ const Section = styled.div`
   text-align: center;
   margin: 10rem;
   padding: 0 12rem;
+  @media (max-width: 56.25em) {
+    margin: 60px;
+    padding: 30px;
+  }
   .bar {
     border: 1px solid #e5e5e5;
     margin: 15px 0;

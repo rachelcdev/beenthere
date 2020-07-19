@@ -81,7 +81,7 @@ function Landing(props) {
             <span>在这里卸下压力与伪装</span>
             <span>整理心情，重新出发</span>
           </h3>
-          <Link to="/training">
+          <Link to="/psgmeeting">
             <Button>点我预约登舱</Button>
           </Link>
         </div>

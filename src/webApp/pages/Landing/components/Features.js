@@ -171,7 +171,7 @@ function Features() {
             <div className="arrow arrow--2">{arrowIcon}</div>
           </Card>
         </Link>
-        <Link to="/training">
+        <Link to="/psgmeeting">
           <Card className="features__card--3 feature">
             <img src={Icon3} className="feature__icon" alt="feature icon" />
             <div className="feature__title">7 天人生解压舱</div>

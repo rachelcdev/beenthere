@@ -74,6 +74,7 @@ const Section = styled.div`
   .info,
   .location {
     font-size: ${style["font-size-sm"]};
+    line-height: ${style["line-height-m"]};
   }
 
   .icon {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import style from "../../global-style";
+import style from "../../../global-style";
 import styled from "styled-components";
 import Swiper from "swiper";
 import "swiper/css/swiper.css";
@@ -9,6 +9,10 @@ const Section = styled.div`
   text-align: center;
   margin: 10rem;
   padding: 0 15rem;
+  @media (max-width: 56.25em) {
+    margin: 60px;
+    padding: 30px;
+  }
   .title {
     font-size: ${style["font-size-ll"]};
     line-height: ${style["line-height-3"]};

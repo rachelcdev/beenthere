@@ -189,7 +189,7 @@ function BuddyDetail(props) {
         return null;
     }
   };
-  console.log(checkIcon(service), id);
+
   return (
     <Section colorChange={colorChange}>
       {checkIcon(service)}

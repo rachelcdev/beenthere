@@ -13,6 +13,9 @@ const Section = styled.div`
     width: 1440px;
     margin: 0 auto;
   }
+  @media (max-width: 56.25em) {
+    padding: 10rem 5rem;
+  }
   .title {
     text-align: center;
     color: ${style["color-yellow-3"]};
