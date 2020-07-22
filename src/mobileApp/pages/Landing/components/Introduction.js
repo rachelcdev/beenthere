@@ -8,14 +8,14 @@ const Description = styled.div`
   letter-spacing: 0;
   text-align: left;
   width: 340px;
-  height: 160px;
+  height: 190px;
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 5px 10px;
   border: 1px solid ${style["font-color-light-1"]};
   .title {
     letter-spacing: inherit;
-    margin-top: 10px;
+    margin: 6px auto;
     text-align: inherit;
     font-size: ${style["font-size-ls"]};
     line-height: ${style["line-height-ll"]};
@@ -27,7 +27,6 @@ const Description = styled.div`
   .sub {
     font-size: ${style["font-size-s"]};
     line-height: ${style["line-height-ll"]};
-
     color: ${style["font-color-light-2"]};
   }
 `;
@@ -1078,8 +1077,12 @@ function Introduction(props) {
             了解 BeenThere <span className="title--icon">{arrowIcon}</span>
           </div>
           <div className="sub">
-            Beenthere 有 100 余位来自世界各地的Online Buddy, <br />
-            TA 们经过精心筛选和严格培训, 其中有哈佛、麻省理工、哥大、宾大、
+            BeenThere 是一个源自哈佛中国学生的心灵互助社区
+            <br />
+            也是一个由哈佛大学和麻省理工学院孵化的社会企业
+            <br />
+            我们有 100 余位来自世界各地的Online Buddy, TA
+            们经过精心筛选和严格培训, 其中有哈佛、麻省理工、哥大、宾大、
             斯坦福、伯克利、清华、北大、北师大、港大、剑桥、牛津等名校的众多校友
           </div>
         </Link>

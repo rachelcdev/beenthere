@@ -27,8 +27,8 @@ function Footer(props) {
   return (
     <Section>
       <div>
-        BeenThere 是一个由志愿者组成的互助倾听组织，不提供专业的医疗服务，
-        如有需要，建议您接受相关专业服务，或是拨打网站上免费专业的
+        BeenThere
+        是一个互助倾听组织，不提供专业的心理咨询和医疗服务。如有需要，建议您接受相关专业服务，或是拨打我们为您搜集的免费专业的
         <Link to="/hotline" className="highlight">
           &nbsp;[心理支持服务热线]
         </Link>
