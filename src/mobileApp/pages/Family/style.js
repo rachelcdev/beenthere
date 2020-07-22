@@ -2,7 +2,9 @@ import styled from "styled-components";
 import style from "../../global-style";
 export const Section = styled.div`
   text-align: center;
-  height: 100%;
+
+  width: 100%;
+  /* overflow: hidden; */
   .description {
     &--1,
     &--2 {
@@ -35,8 +37,7 @@ export const Section = styled.div`
 `;
 export const Gallery = styled.div`
   position: relative;
-
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
   margin-top: 30px;
   .image {
