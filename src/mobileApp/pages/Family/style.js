@@ -4,7 +4,7 @@ export const Section = styled.div`
   text-align: center;
 
   width: 100%;
-  /* overflow: hidden; */
+
   .description {
     &--1,
     &--2 {
@@ -22,13 +22,12 @@ export const Section = styled.div`
   }
   .video {
     padding-top: 70px;
-    width: 390px;
-
+    width: 90%;
     margin: 0 auto;
   }
   .credentials {
     width: 90%;
-
+    /* overflow: hidden; */
     margin: 0 auto;
     &__icon {
       width: 100%;
@@ -40,6 +39,7 @@ export const Gallery = styled.div`
   width: 90%;
   margin: 0 auto;
   margin-top: 30px;
+
   .image {
     position: absolute;
     width: 162px;
@@ -103,7 +103,7 @@ export const Gallery = styled.div`
 export const Credentials = styled.div`
   display: grid;
   grid-column: full-start/full-end;
-  grid-template-columns: repeat(3, 120px);
+  grid-template-columns: repeat(3, 110px);
   grid-template-rows: repeat(3, 70px);
   grid-column-gap: 2px;
   grid-row-gap: 10px;
