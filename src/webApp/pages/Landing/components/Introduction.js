@@ -1128,7 +1128,7 @@ function Introduction(props) {
           <div className="introduction__group">
             <div className="introduction__detail">
               <span className="introduction__count">4500+</span>
-              <span className="introduction__text">同伴咨询</span>
+              <span className="introduction__text">同伴支持</span>
             </div>
             <div className="introduction__description">
               共进行超过4500次同伴心理支持服务

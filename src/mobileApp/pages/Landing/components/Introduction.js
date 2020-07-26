@@ -1100,7 +1100,7 @@ function Introduction(props) {
               4500+
             </span>
             <span className="introduction__text introduction__text--center">
-              同伴咨询
+              同伴支持
             </span>
           </div>
           <div className="introduction__description">

@@ -36,7 +36,14 @@ function Footer(props) {
       </div>
 
       <div className="copyright">
-        @copyright BeenThere 2020. Designed By xxxx | Powered By xxx
+        <p>
+          Designed By Yunjie Zhang, Mohan Pan, Heru Wang | Powered By Rui Cao,
+          Jack Zhu, Zhiyang Pan, Haochen Yang
+        </p>
+        <p>
+          Copyright &copy; 上海彼巷文化传媒有限公司 |
+          联系方式：contact@beentherebuddy.com{" "}
+        </p>
       </div>
     </Section>
   );

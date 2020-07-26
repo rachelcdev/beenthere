@@ -3,6 +3,7 @@ import style from "../../global-style";
 export const Container = styled.div`
   width: 100%;
   overflow: hidden;
+  margin: 0 auto;
   .image {
     margin: 70px 30px 30px 30px;
     /* margin-top: 70px; */
@@ -73,7 +74,7 @@ export const HeaderContainer = styled.div`
   }
   & > span {
     text-align: center;
-    flex: 0 0 65%;
+    flex: 0 0 75%;
     letter-spacing: 0.02em;
   }
 `;

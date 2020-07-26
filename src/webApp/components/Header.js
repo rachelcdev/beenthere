@@ -2,8 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import style from "../global-style";
-import Logo from "../../img/logo.svg";
-import LogoWord from "../../img/logo-word.svg";
+
+import LogoWord from "../../img/logo-word.png";
 const Section = styled.header`
   position: fixed;
   top: 0;
@@ -70,7 +70,6 @@ export default function Header(props) {
       backgroundColor={backgroundColor}
     >
       <NavLink to="/" exact className="header__logo ">
-        <img src={Logo} alt="logo" className="logo" />
         <img src={LogoWord} alt="word logo" className="logo" />
       </NavLink>
 

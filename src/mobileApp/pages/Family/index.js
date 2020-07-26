@@ -188,7 +188,7 @@ function Family(props) {
           />
 
           <img
-            src="/family/gallery_5_1.png"
+            src="/family/gallery_6_1.jpg"
             alt="family gallery"
             className="image image--8"
           />
@@ -203,12 +203,6 @@ function Family(props) {
             src="/family/gallery_5_3.jpg"
             alt="family gallery"
             className="image image--10"
-          />
-
-          <img
-            src="/family/gallery_6_1.jpg"
-            alt="family gallery"
-            className="image image--11"
           />
         </Gallery>
       </Section>

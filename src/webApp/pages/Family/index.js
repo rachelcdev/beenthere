@@ -134,13 +134,7 @@ function Family() {
         <figure className="item--9">
           <div className="text">“莫愁前路无知己， BeenThere Buddy 在等你”</div>
         </figure>
-        <figure className="item--10">
-          <img
-            src="/family/gallery_5_1.png"
-            alt="family gallery"
-            className="image"
-          />
-        </figure>
+
         <figure className="item--11">
           <img
             src="/family/gallery_5_2.png"
