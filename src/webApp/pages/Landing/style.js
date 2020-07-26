@@ -4,7 +4,7 @@ export const Section = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 20px;
+  padding: 50px 20px;
   width: 55%;
   margin: 0 auto;
   color: ${style["font-color-light-2"]};

@@ -5,7 +5,7 @@ import style from "../../../global-style";
 import Swiper from "swiper";
 import { Link } from "react-router-dom";
 const Section = styled.div`
-  padding: 10rem;
+  padding: 10rem 10rem 0 10rem;
   text-align: center;
   @media (min-width: 93.75em) {
     width: 1440px;

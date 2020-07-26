@@ -8,8 +8,8 @@ const Section = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  height: 6rem;
-  line-height: 6rem;
+  height: 7rem;
+  line-height: 7rem;
   z-index: 100;
   width: 100%;
   display: flex;
@@ -24,13 +24,13 @@ const Section = styled.header`
     flex-direction: column;
   } */
   .logo {
-    vertical-align: bottom;
+    vertical-align: middle;
     display: inline-block;
     /* margin: auto 0; */
     height: 6rem;
   }
   a {
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
     font-size: inherit;
     color: ${(props) =>
       props.fontColor ? props.fontColor : style["font-color-light-1"]};
